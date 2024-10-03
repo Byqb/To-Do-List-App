@@ -1,0 +1,109 @@
+body { 
+  background: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.8;
+  animation: twinkling 1.5s infinite alternate;
+}
+
+@keyframes twinkling {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+#todo-container {
+  background: rgb(41, 33, 33);
+  width: 400px;
+  margin: 0 auto;
+  border: 2px solid #0033ff;
+  padding: 20px;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 51, 255, 0.7);
+  position: relative; /* For positioning of stars */
+  z-index: 1; /* Keep the container above stars */
+}
+
+#header {
+  margin: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: #00f; /* Blue color for header */
+  text-shadow: 0 0 10px rgba(0, 51, 255, 0.9), 0 0 20px rgba(0, 51, 255, 0.5);
+}
+
+h1 {
+  margin-bottom: 20px; 
+  color: #00f;
+  text-shadow: 0 0 10px rgba(0, 51, 255, 0.9), 0 0 20px rgba(0, 51, 255, 0.5);
+}
+
+#input-box {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  color: #00f; /* Blue text color */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px rgba(0, 51, 255, 0.5);
+}
+
+#input-button {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e60ea;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 51, 255, 0.9);
+}
+
+#input-button:hover {
+  background-color: #9eb7fd; 
+  box-shadow: 0 0 15px rgba(0, 51, 255, 0.7);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+}
+
+li {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #00f; /* Blue text for list items */
+  text-shadow: 0 0 5px rgba(0, 51, 255, 0.5);
+}
+
+.edit-btn, .delete-btn {
+  float: right;
+  color: crimson;
+  cursor: pointer;
+  margin: 3px 5px;
+  border: none;
+  padding: 3px 5px;
+  background: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  border: 1px solid gray;
+}
